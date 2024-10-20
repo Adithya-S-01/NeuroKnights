@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Invest in Gold</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for sections */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading styles */
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FF4081; /* Main color for headings */
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Input styles */
+        input[type="text"] {
+            width: calc(100% - 40px);
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        /* Invest Button */
+        .btn-invest {
+            display: block;
+            width: 200px;
+            padding: 15px;
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            text-align: center;
+            margin: 20px auto;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .btn-invest:hover {
+            background-color: #45a049; /* Darker green */
+        }
+
+        /* Output Styles */
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #FFEB3B; /* Yellow background */
+            border-radius: 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section 1: Why Invest in Gold -->
+    <div class="container">
+        <h1>Why Investing in Gold is Beneficial</h1>
+        <p>
+            Analyzing the portfolio and the risk-taking ability, we suggest you invest in gold. 
+            Investing in gold can provide you with portfolio stability, an inflation hedge, diversification, protection against economic instability, liquidity, and a suitable match to your risk tolerance. Given your current financial situation, investing in gold allows you to maintain wealth and potentially grow it slowly but securely.
+        </p>
+    </div>
+
+    <!-- Section 2: Steps to Invest in Gold -->
+    <div class="container">
+        <p>
+            "Risk comes from not knowing what you’re doing." – Warren Buffett
+        </p>
+    </div>
+
+    <!-- Section 3: Input Form for Investments -->
+    <div class="container">
+        <h2>Input Your Investment Data</h2>
+        <form action="{%url 'golresult'%}" >
+            <input type="text" name="spx" placeholder="SPX" required>
+            <input type="text" name="uso" placeholder="USO" required>
+            <input type="text" name="slv" placeholder="SLV" required>
+            <input type="text" name="eur_usd" placeholder="EUR/USD" required>
+            <button type="submit" class="btn-invest">Calculate Gold Returns</button>
+        </form>
+    </div>
+
+    <!-- Section 4: Result Output -->
+    <div class="container" id="result-container" style="display:none;">
+        <div class="result" id="result-output">
+            <!-- Result will be injected here -->
+        </div>
+    </div>
+    
+    <script>
+        // Optional: Handle form submission via AJAX if needed
+        // You can add JavaScript to handle the form submission and display the result without refreshing the page.
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Finanza</title>
+    <style>
+        /* Global Reset and Font Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            width: 100%;
+            background-color: #111;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        /* Responsive Navbar Menu for smaller screens */
+        .navbar a.mobile-menu {
+            display: none;
+        }
+
+        /* Dashboard Main Content */
+        .dashboard-container {
+            margin-top: -25px; /* Margin for navbar */
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Buttons Styling */
+        .btn {
+            width: 300px;
+            padding: 18px 0;
+            margin: 15px;
+            font-size: 1.4rem; /* Slightly larger text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            display: inline-block; /* Makes the link behave like a button */
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9; /* Reduce opacity on hover for all buttons */
+        }
+
+        .btn.gold {
+            background-color: #ffd700;
+            color: black;
+        }
+
+        .btn.gold:hover {
+            background-color: #e0c400;
+        }
+
+        .btn.stocks {
+            background-color: #28a745;
+        }
+
+        .btn.stocks:hover {
+            background-color: #218838;
+        }
+
+        .btn.risk-levels {
+            background-color: #ff5722;
+        }
+
+        .btn.risk-levels:hover {
+            background-color: #e64a19;
+        }
+
+        .btn.bonds {
+            background-color: #9c27b0; /* Purple for Bonds */
+        }
+
+        .btn.bonds:hover {
+            background-color: #7b1fa2;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .btn {
+                width: 170px;
+                padding: 16px;
+                font-size: 1.2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                width: 140px;
+                padding: 14px;
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            /* Display mobile menu icon */
+            .navbar a.mobile-menu {
+                display: block;
+            }
+
+            .navbar .desktop-menu {
+                display: none;
+            }
+        }
+
+        /* Hero Section Background */
+        .hero1 {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            background-color: black;
+            background-image: url('anime.gif'); /* Make sure the gif is in the right directory */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero1">
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="dashboard.html">Dashboard</a>
+            <div class="desktop-menu">
+                <a href="portfolio.html">Portfolio</a>
+                <a href="#">Investments</a>
+                <a href="#">Settings</a>
+            </div>
+            <a href="#" class="mobile-menu">Menu</a>
+        </div>
+
+        <!-- Main Dashboard Content -->
+        <div class="dashboard-container">
+            <h1>User Dashboard</h1>
+
+            <!-- Buttons for different sections linked to specific URLs -->
+            <a href="{%url 'goldy'%}" class="btn gold" style="font-size: xx-large;">Gold</a>
+            <a href="#" class="btn stocks" style="font-size: xx-large;">Stocks</a>
+            <a href="{%url 'risk_rate'%}" class="btn risk-levels" style="font-size: xx-large;">Risk Levels</a>
+            <a href="#" class="btn bonds" style="font-size: xx-large;">Bonds</a>
+        </div>
+    </div>
+</body>
+</html>

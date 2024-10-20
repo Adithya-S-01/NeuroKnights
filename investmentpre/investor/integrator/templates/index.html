@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest - Personalized Investment Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hero Section Background */
+        .hero1 {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            background-color: black;
+            background-image: url('Dave Whyte.gif'); /* Make sure the gif is in the right directory */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Foreground Hero Content */
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white;
+            border-radius: 15px;
+            text-align: center;
+            width: 400px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #FF4081;  /* Pink color */
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #E91E63; /* Darker shade on hover */
+        }
+
+        /* Typing Animation */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        .typing-demo {
+            width: 22ch; /* This matches the number of characters, ensuring no shrinking */
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-family: monospace;
+            font-size: 2em;
+            animation: typing 4s steps(22), stop-blink 0.75s step-end forwards;
+            color: white;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 22ch; /* Matches the number of characters in "INVEST." */
+            }
+        }
+
+        @keyframes stop-blink {
+            0% {
+                border-color: white;
+            }
+            100% {
+                border-color: transparent; /* Makes the cursor disappear */
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box {
+                padding: 20px;
+                max-width: 90%;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+            .cta-button {
+                font-size: 0.8rem;
+                padding: 8px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero1">
+        <!-- Foreground Hero Content -->
+        <div class="box">
+            <!-- Typing animation instead of logo -->
+            <div class="wrapper">
+                <div class="typing-demo">
+                  INVEST.
+                </div>
+            </div>
+            <br><br>
+            <h1>Personalized Investment Solutions</h1>
+            <p>Your journey to smarter, data-driven investment begins here. Let us predict your potential returns with tailored advice.</p>
+            <a href="{% url 'signup' %}" class="cta-button">Sign Up!</a>
+            <br>
+            <a href="{% url 'signin' %}" class="cta-button">Sign In!</a>
+
+        </div>
+    </div>
+</body>
+</html>

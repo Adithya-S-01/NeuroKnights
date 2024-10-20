@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Display</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+        }
+        h1 {
+            color: #ff4757;
+            margin-bottom: 20px;
+        }
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2ed573;
+            border: 2px solid #2ed573;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: rgba(46, 213, 115, 0.1);
+            transition: all 0.3s;
+        }
+        .result:hover {
+            transform: scale(1.05);
+            border-color: #1e5e40;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #576574;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Returns from Gold :</h1>
+    <div class="result" id="result">
+        <p>{{name}}</p>
+    </div>
+    <div class="footer">
+        Thank you for using our service!
+    </div>
+</div>
+
+</body>
+</html>
